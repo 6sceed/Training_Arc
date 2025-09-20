@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - StackMates</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: white;
+      line-height: 1.6;
+      background: black;
+    }
+
+    .background-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.2; /* subtle background */
+    }
+
+    /* Header (same as homepage) */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backdrop-filter: blur(8px);
+      background: rgba(46, 46, 46, 0.4);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1.5rem 0;
+      z-index: 20;
+    }
+
+    nav {
+      margin-right: 1.5rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 400;
+      opacity: 0.85;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: gold;
+      text-shadow: 0 0 8px gold;
+      opacity: 1;
+    }
+
+    main {
+      flex: 1;
+      margin-top: 120px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .contact-form-container {
+      max-width: 800px;
+      width: 100%;
+      background-color: rgba(30, 30, 30, 0.85);
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(255, 215, 0, 0.2);
+      margin-top: 60px;
+      transition: all 0.3s ease;
+        
+    }
+    .contact-form-container:hover {
+  box-shadow: 0px 8px 30px rgba(255, 217, 0, 0.411);
+  transform: translateY(-8px); 
+}
+
+    .contact-form-container h2 {
+      font-size: 2rem;
+      color: gold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      font-size: 16px;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #111;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .contact-form button {
+      background-color: #222;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: gold;
+      color: black;
+      font-weight: 600;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: gold;
+      text-shadow: 0 0 8px gold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Image -->
+  <img src="images/bg.gif" alt="Background" class="background-img">
+
+  <!-- Header (unified with homepage) -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-form-container">
+      <h2>Get in Touch</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="f903f37c-af56-447c-aba0-42763bd612c5">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div class="social-icons">
+        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
